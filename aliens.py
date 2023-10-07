@@ -32,11 +32,12 @@ class Aliens(object):
         
         
         
-        moves=[[0,1],[1,0],[0,-1],[-1,0]]
+        moves=[[0,1],[1,0],[0,-1],[-1,0],[0,0]]
+        random.shuffle(self.alienSpaces)
         aliensCopy=copy.deepcopy(self.alienSpaces)
         for alien in aliensCopy:
             #print(alien)
-            move=random.sample(moves,4)
+            move=random.sample(moves,5)
             for move in moves:
                 neighbourRow = alien[0]+move[0]
                 neighbourCol = alien[1]+move[1]
