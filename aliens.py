@@ -37,7 +37,7 @@ class Aliens(object):
         aliensCopy=copy.deepcopy(self.alienSpaces)
         for alien in aliensCopy:
             #print(alien)
-            move=random.sample(moves,5)
+            random.shuffle(moves)
             for move in moves:
                 neighbourRow = alien[0]+move[0]
                 neighbourCol = alien[1]+move[1]
